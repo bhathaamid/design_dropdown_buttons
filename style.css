@@ -1,0 +1,100 @@
+/*Begin here*/
+:root {
+  /* Colors: */
+  ---black: #000000;
+  ---zf-dark-blue: #001024;
+  ---zf-cs-text-dark-gray: #333333;
+  ---zf-cs-gray: #eef1f4;
+  ---zf-cs-light-gray: #dddddd;
+  ---black-25: #bfbfbf;
+  ---black-50: #7f7f7f;
+  ---white: #ffffff;
+  ---zf-blue: #0070b4;
+  ---zf-blue-50: #7db5db;
+  ---zf-blue-15: #d8e9f4;
+  ---zf-cyan: #00abe7;
+  ---zf-cyan-50: #7fd5f3;
+  ---zf-cyan-25: #bfeaf9;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dd-button {
+  display: inline-block;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 24px 8px 24px;
+  background-color: var(---zf-cyan);
+  cursor: pointer;
+  color: var(---white);
+  white-space: nowrap;
+}
+
+.dd-button:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid var(---white);
+}
+.focus {
+  background-color: var(---zf-cyan);
+  border: 1px solid var(---zf-blue);
+}
+.hover {
+  background-color: var(---zf-cyan-50);
+}
+
+.active {
+  background-color: var(---zf-blue);
+}
+.disabled {
+  background-color: var(---zf-cyan-25);
+}
+
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  list-style-type: none;
+}
+
+.dd-input + .dd-menu {
+  display: none;
+}
+
+.dd-input:checked + .dd-menu {
+  display: block;
+}
+
+.dd-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  color: var(---black-50);
+}
+
+.dd-menu li:first-child {
+  color: var(---zf-cs-text-dark-gray);
+}
+
+.dd-menu li:last-child {
+  background: var(---zf-cs-gray) 0% 0% no-repeat padding-box;
+}
